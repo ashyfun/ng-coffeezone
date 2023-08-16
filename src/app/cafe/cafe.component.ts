@@ -1,10 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-interface Cafe {
-  title: string
-  topics: string
-  address: string
-}
+import { Cafe } from '../cafe.iface';
 
 @Component({
   selector: 'cz-cafe',
@@ -15,7 +10,7 @@ interface Cafe {
         <p class="uk-text-meta uk-margin-remove-top">{{ cafe.topics }}</p>
       </div>
       <div class="uk-card-body">
-        <p>{{ cafe.address }}</p>
+        <p>{{ cafe.location?.address }}</p>
       </div>
     </div>
   `,
